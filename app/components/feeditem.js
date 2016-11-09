@@ -139,8 +139,11 @@ export default class FeedItem extends React.Component {
                   // i is comment's index in comments array
                   return (
                     <Comment key={i}
+                      reactKey={i}
+                      postID={this.state._id}
                       author={comment.author}
-                      postDate={comment.postDate}>
+                      postDate={comment.postDate}
+                      likeCounter={comment.likeCounter}>
                       {comment.contents}
                     </Comment>
                   );
